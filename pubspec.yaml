@@ -1,7 +1,7 @@
 name: animated_fab
 description: "An Animated Floating Action Button (FAB) for Flutter that expands to reveal a list of sub-FABs with a beautiful animation."
 version: 0.0.1
-homepage: ""
+homepage: "https://github.com/SwanFlutter/animated_fab"
 
 environment:
   sdk: ^3.6.0

@@ -1,4 +1,3 @@
-
 library;
 
 import 'package:animated_fab/src/tools/fab_item.dart';
@@ -218,5 +217,3 @@ class _AnimatedFABState extends State<AnimatedFAB> with SingleTickerProviderStat
     );
   }
 }
-
-
