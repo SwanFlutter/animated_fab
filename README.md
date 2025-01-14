@@ -35,38 +35,43 @@ This package is designed to provide a user-friendly and visually appealing way t
 
 ```dart
 AnimatedFAB(
-backgroundColorFABItem: Colors.deepPurpleAccent,
-fABIcon: const SvgIcon(icon: SvgIconData('assets/feather_pan.svg')),
-mini: true,
-heroTag: 'fab-animated',
-tooltip: 'Elections',
-items: [
-FABItem(
-tooltip: 'Voting',
-child: Image.asset("assets/voteIcon/president.gif"),
-heroTag: 'fab-poll-outlined',
-onPressed: () async {
-await Get.to(() => const CreateVote());
-PublicAccessController.to.votes.sort((e1, e2) => e2.registerDate.compareTo(e1.registerDate));
-},
-),
-FABItem(
-tooltip: "Poll",
-child: Image.asset("assets/voteIcon/voting.gif"),
-heroTag: 'fab-poll-rounded',
-onPressed: () async {
-await Get.to(() => const CreateVotePoll());
-PublicAccessController.to.votes.sort((e1, e2) => e2.registerDate.compareTo(e1.registerDate));
-},
-),
-FABItem(
-tooltip: "Public request",
-heroTag: 'fab-quiz',
-onPressed: () {},
-child: Image.asset("assets/voteIcon/team.gif"),
-),
-],
-),
+  backgroundColorFABItem: Colors.deepPurpleAccent,
+  fABIcon: const SvgIcon(icon: SvgIconData('assets/feather_pan.svg')),
+  mini: true,
+  heroTag: 'fab-animated',
+  tooltip: 'Elections',
+  items: [
+    FABItem(
+      tooltip: 'Voting',
+      child: Image.asset("assets/voteIcon/president.gif"),
+      heroTag: 'fab-poll-outlined',
+      onPressed: () async {
+        await Get.to(() => const CreateVote());
+        PublicAccessController.to.votes.sort(
+          (e1, e2) => e2.registerDate.compareTo(e1.registerDate),
+        );
+      },
+    ),
+    FABItem(
+      tooltip: "Poll",
+      child: Image.asset("assets/voteIcon/voting.gif"),
+      heroTag: 'fab-poll-rounded',
+      onPressed: () async {
+        await Get.to(() => const CreateVotePoll());
+        PublicAccessController.to.votes.sort(
+          (e1, e2) => e2.registerDate.compareTo(e1.registerDate),
+        );
+      },
+    ),
+    FABItem(
+      tooltip: "Public request",
+      child: Image.asset("assets/voteIcon/team.gif"),
+      heroTag: 'fab-quiz',
+      onPressed: () {},
+    ),
+  ],
+)
+
 ```
 
 ## Additional information
