@@ -13,6 +13,17 @@ This package is designed to provide a user-friendly and visually appealing way t
  - **Easy to Use:** The package is simple to integrate into your Flutter project and requires minimal setup.
  - **Hero Animation:** The main FAB can participate in hero animations for smooth transitions between screens.
 
+
+
+
+![20250114_070352](https://github.com/user-attachments/assets/36ced5a8-5b95-4e95-b850-d52d1a23f632)
+
+
+![20250114_041134](https://github.com/user-attachments/assets/93d509d3-4661-4f08-a5e4-992981755a0b)
+
+
+
+
 ## Getting started
 
 
@@ -35,38 +46,43 @@ This package is designed to provide a user-friendly and visually appealing way t
 
 ```dart
 AnimatedFAB(
-backgroundColorFABItem: Colors.deepPurpleAccent,
-fABIcon: const SvgIcon(icon: SvgIconData('assets/feather_pan.svg')),
-mini: true,
-heroTag: 'fab-animated',
-tooltip: 'Elections',
-items: [
-FABItem(
-tooltip: 'Voting',
-child: Image.asset("assets/voteIcon/president.gif"),
-heroTag: 'fab-poll-outlined',
-onPressed: () async {
-await Get.to(() => const CreateVote());
-PublicAccessController.to.votes.sort((e1, e2) => e2.registerDate.compareTo(e1.registerDate));
-},
-),
-FABItem(
-tooltip: "Poll",
-child: Image.asset("assets/voteIcon/voting.gif"),
-heroTag: 'fab-poll-rounded',
-onPressed: () async {
-await Get.to(() => const CreateVotePoll());
-PublicAccessController.to.votes.sort((e1, e2) => e2.registerDate.compareTo(e1.registerDate));
-},
-),
-FABItem(
-tooltip: "Public request",
-heroTag: 'fab-quiz',
-onPressed: () {},
-child: Image.asset("assets/voteIcon/team.gif"),
-),
-],
-),
+  backgroundColorFABItem: Colors.deepPurpleAccent,
+  fABIcon: const SvgIcon(icon: SvgIconData('assets/feather_pan.svg')),
+  mini: true,
+  heroTag: 'fab-animated',
+  tooltip: 'Elections',
+  items: [
+    FABItem(
+      tooltip: 'Voting',
+      child: Image.asset("assets/voteIcon/president.gif"),
+      heroTag: 'fab-poll-outlined',
+      onPressed: () async {
+        await Get.to(() => const CreateVote());
+        PublicAccessController.to.votes.sort(
+          (e1, e2) => e2.registerDate.compareTo(e1.registerDate),
+        );
+      },
+    ),
+    FABItem(
+      tooltip: "Poll",
+      child: Image.asset("assets/voteIcon/voting.gif"),
+      heroTag: 'fab-poll-rounded',
+      onPressed: () async {
+        await Get.to(() => const CreateVotePoll());
+        PublicAccessController.to.votes.sort(
+          (e1, e2) => e2.registerDate.compareTo(e1.registerDate),
+        );
+      },
+    ),
+    FABItem(
+      tooltip: "Public request",
+      child: Image.asset("assets/voteIcon/team.gif"),
+      heroTag: 'fab-quiz',
+      onPressed: () {},
+    ),
+  ],
+)
+
 ```
 
 ## Additional information
